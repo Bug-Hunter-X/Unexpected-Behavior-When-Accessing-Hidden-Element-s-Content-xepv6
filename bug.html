@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+
+  <script>
+    // Incorrect way to hide an element using display: none
+    document.getElementById("myDiv").style.display = "none"; 
+
+    // ... some other code that attempts to access or modify
+    // the content of the div after it's hidden, causing unexpected issues
+    // such as error messages or silent failures. 
+    console.log(document.getElementById("myDiv").innerHTML);
+  </script>
+</body>
+</html>

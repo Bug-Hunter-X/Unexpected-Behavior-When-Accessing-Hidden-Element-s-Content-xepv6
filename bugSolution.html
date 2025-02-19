@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+
+  <script>
+    document.getElementById("myDiv").style.display = "none";
+
+    const myDiv = document.getElementById("myDiv");
+    if (myDiv) {
+      console.log(myDiv.innerHTML); // Access innerHTML only if the element exists
+    } else {
+      console.log("Element not found.");
+    }
+  </script>
+</body>
+</html>
